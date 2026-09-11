@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ABHINAYFLIX - Watch Movies, Series & Cartoons</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+
+        <div class="logo">
+            ABHINAYFLIX
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#movies">Movies</a>
+            <a href="#series">Series</a>
+            <a href="#cartoons">Cartoons</a>
+        </nav>
+
+        <div class="search-area">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search..."
+                onkeyup="searchMovies()"
+            >
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+           <marquee> <h1>Welcome to ABHINAYFLIX</h1></marquee>
+
+            <h2>Movies • Series • Cartoons</h2>
+
+            <p>
+                Watch your favorite entertainment online.
+                No registration required.
+            </p>
+
+            <button onclick="scrollToMovies()">
+                ▶ Browse Now
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- VIDEO PLAYER -->
+    <section class="watch-section" id="watch">
+
+        <h2>Watch Now</h2>
+
+        <div class="player-container">
+
+            <video id="videoPlayer" controls poster="images/toxic.png">
+    <source src="videos/Toxic (2026) Telugu DVDScr - x264 - AAC - 800MB.mp4" type="video/mp4">
+</video>
+
+            <h3 id="videoTitle">
+               🔥TOXIC...🔥
+            </h3>
+
+        </div>
+
+    </section>
+
+
+    <!-- MOVIES -->
+    <section class="content" id="movies">
+
+        <h2>🔥 Popular Movies</h2>
+
+        <div class="movie-grid">
+
+            <div class="card" data-title="Action Hero">
+                
+                <img src="images/movies1.png" alt="Lost City">
+
+
+                <div class="card-info">
+
+                    <h3>Action Hero</h3>
+
+                    <p>Action • 2026</p>
+
+                     <button onclick="watchVideo(
+                     
+                    )">
+                        ▶ Watch
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="card" data-title="Space Journey">
+
+                <img src="images/space.png" alt="Space Journey">
+
+                <div class="card-info">
+
+                    <h3>Space Journey</h3>
+
+                    <p>Sci-Fi • 2026</p>
+
+                    <button onclick="watchVideo(
+                        '',
+                        'Space Journey',
+                        'images/movie2.jpg'
+                    )">
+                        ▶ Watch
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="card" data-title="Lost City">
+
+                <img src="images/horror.png" alt="Lost City">
+
+                <div class="card-info">
+
+                    <h3>Horrer</h3>
+
+                    <p>Adventure • 2026</p>
+
+                    <button onclick="watchVideo(
+                         'videos/HusharPittalu.mp4',
+                         'The action',
+                        'images/series1.jpg'
+                    )">
+                        ▶ Watch
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERIES -->
+    <section class="content" id="series">
+
+        <h2>📺 Trending Series</h2>
+
+        <div class="movie-grid">
+
+            <div class="card" data-title="The Detective">
+
+                <img src="images/comedyseries.png" alt="The Detective">
+
+                <div class="card-info">
+
+                    <h3>The ComedySeries</h3>
+
+                    <p>Series • Season 1</p>
+
+                    <button onclick="watchVideo(
+                        'videos/series1.mp4',
+                        'The Detective',
+                        'images/series1.jpg'
+                    )">
+                        ▶ Watch
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="card" data-title="Hidden Truth">
+
+                <img src="images/series2.png" alt="Hidden Truth">
+
+                <div class="card-info">
+
+                    <h3>CRIME</h3>
+
+                    <p>Series • Season 1</p>
+
+                    <button onclick="watchVideo(
+                        'videos/series1.mp4',
+                        'Hidden Truth',
+                        'images/series2.jpg'
+                    )">
+                        ▶ Watch
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CARTOONS -->
+    <section class="content" id="cartoons">
+
+        <h2>🎨 Cartoons</h2>
+
+        <div class="movie-grid">
+
+            <div class="card" data-title="Funny Friends">
+
+                <img src="images/doramon.png" alt="Funny Friends">
+
+                <div class="card-info">
+
+                    <h3>Doraemon</h3>
+
+                    <p>Cartoon • Kids</p>
+
+                    <button onclick="watchVideo(
+                        'videos/cartoon1.mp4',
+                        'Funny Friends',
+                        'images/cartoon1.jpg'
+                    )">
+                        ▶ Watch
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="card" data-title="Magic World">
+
+                <img src="images/cartoon2.png" alt="Magic World">
+
+                <div class="card-info">
+
+                    <h3>Naruto</h3>
+
+                    <p>Cartoon • Fantasy</p>
+
+                    <button onclick="watchVideo(
+                        'videos/cartoon1.mp4',
+                        'Magic World',
+                        'images/cartoon2.jpg'
+                    )">
+                        ▶ Watch
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h2>ABHINAYFLIX</h2>
+
+        <p>
+            Watch movies, series and cartoons online.
+        </p>
+
+        <p>
+            © 2026 ABHINAYFLIX
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
